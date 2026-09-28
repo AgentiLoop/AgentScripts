@@ -1,13 +1,13 @@
 # AgentScripts
 
-Dynamic Swift scripts for the [Agent!](https://github.com/macOS26/Agent) macOS app. These scripts compile at runtime as dynamic libraries (`.dylib`) and are loaded into the app via `dlopen`.
+Dynamic Swift scripts for the [Agent!](https://github.com/AgentiLoop/Agent) macOS app. These scripts compile at runtime as dynamic libraries (`.dylib`) and are loaded into the app via `dlopen`.
 
 ## How It Works
 
 1. On first launch, the Agent! app clones this repo to `~/Documents/AgentScript/agents/`
 2. Each script is compiled individually via `swift build` as a dynamic library
 3. The app loads the compiled `.dylib` and calls the `script_main()` entry point
-4. Scripts can import bridges from [AgentEventBridges](https://github.com/macOS26/AgentEventBridges) to control macOS apps via Apple Events
+4. Scripts can import bridges from [AgentEventBridges](https://github.com/AgentiLoop/AgentEventBridges) to control macOS apps via Apple Events
 
 ## Writing a Script
 
@@ -89,6 +89,14 @@ The Agent! app provides tools to create, update, delete, and run scripts:
 - `delete_agent_script` - Remove a script
 - `run_agent_script` - Compile and execute a script
 - `list_agent_scripts` - List all available scripts
+
+## Part of AgentiLoop Agent!
+
+AgentScripts is one of the open-source building blocks of **[AgentiLoop Agent!](https://github.com/AgentiLoop/Agent)**, the native AI agent for macOS 14.6+ on Apple Silicon and Intel. Agent! codes in Xcode, drives any Mac app, runs shell as you or as root, and works with 23 LLM providers plus on-device Apple Intelligence.
+
+🌐 [agentiloop.ai](https://agentiloop.ai/) · ⬇️ [Download Agent!](https://github.com/AgentiLoop/Agent/releases/latest) · 🍺 `brew install --cask agentiloop-agent` · 💻 CLIs: [Rust](https://github.com/AgentiLoop/AgentiLoopCLI) / [Go](https://github.com/AgentiLoop/AgentiLoopGo)
+
+**More Agent! packages:** [AgentAccess](https://github.com/AgentiLoop/AgentAccess) · [AgentAudit](https://github.com/AgentiLoop/AgentAudit) · [AgentColorSyntax](https://github.com/AgentiLoop/AgentColorSyntax) · [AgentD1F](https://github.com/AgentiLoop/AgentD1F) · [AgentEventBridges](https://github.com/AgentiLoop/AgentEventBridges) · [AgentLLM](https://github.com/AgentiLoop/AgentLLM) · [AgentMCP](https://github.com/AgentiLoop/AgentMCP) · [AgentSwift](https://github.com/AgentiLoop/AgentSwift) · [AgentTerminalNeo](https://github.com/AgentiLoop/AgentTerminalNeo) · [AgentTools](https://github.com/AgentiLoop/AgentTools)
 
 ## License
 
